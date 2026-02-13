@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "motion/react";
+import { motion, type Variants } from "motion/react";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   Link01Icon,
@@ -21,7 +21,7 @@ const container = {
   }
 };
 
-const item = {
+const item: Variants = {
   hidden: {
     opacity: 0,
     y: "0.5rem",

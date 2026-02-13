@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion, type Variants } from "motion/react";
 import { useBusinessHead } from "./hooks/use-business-head";
 import {
   Meta,
@@ -18,7 +18,7 @@ const page = {
   }
 };
 
-const section = {
+const section: Variants = {
   hidden: {
     opacity: 0,
     y: 20,
@@ -66,7 +66,7 @@ const App = () => {
 
         {config.showGallery && (
           <motion.div variants={section} className="w-full">
-            <GallerySection images={business.gallery} />
+            <GallerySection />
           </motion.div>
         )}
       </main>

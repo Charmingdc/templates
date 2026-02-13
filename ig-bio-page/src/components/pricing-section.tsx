@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "motion/react";
+import { motion, type Variants } from "motion/react";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   MoneyBag01Icon,
@@ -13,7 +13,7 @@ interface Service {
   amount: number;
 }
 
-const item = {
+const item: Variants = {
   hidden: {
     opacity: 0,
     y: 10,
@@ -64,7 +64,7 @@ const PricingSection: React.FC<{ services: Service[] }> = ({ services }) => {
               onClick={() => setOpen(false)}
               className="self-end bg-background p-2 rounded-xl mb-2"
             >
-              <HugeiconsIcon icon={Cancel01Icon} size={22} variant="rounded" />
+              <HugeiconsIcon icon={Cancel01Icon} size={22} />
             </button>
 
             {services.map(service => (

@@ -26,7 +26,7 @@ const MapDisplayer: React.FC<Props> = ({ mapSrc, address, onClose }) => {
         onClick={onClose}
         className="self-end bg-background p-2 rounded-xl"
       >
-        <HugeiconsIcon icon={Cancel01Icon} size={22} variant="rounded" />
+        <HugeiconsIcon icon={Cancel01Icon} size={22} />
       </button>
 
       <iframe
