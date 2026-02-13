@@ -22,6 +22,10 @@
     --card-foreground: 20 20 20;
   }
 
+  html {
+    @apply bg-background;
+  }
+
   body {
     @apply w-full bg-gradient-to-br from-card to-background text-foreground font-montserrat;
   }

@@ -3,6 +3,6 @@ export const config = {
   accent: "224 191 184",
 
   // section toggles
-  showGallery: true,
-  showPricing: true
+  showPricing: true,
+  showGallery: false
 };
