@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: #fdfcfb;
+  color: #0f0f0f;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+h1,
+h2,
+h3 {
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.btn-alive {
+  background: #0f0f0f;
+  color: #ffffff;
+  border-radius: 9999px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding: 1.25rem 3rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 10px 30px -5px rgba(15, 15, 15, 0.3);
+}
+.btn-alive:hover {
+  background: #d48166;
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 20px 40px -10px rgba(212, 129, 102, 0.4);
+}
+::selection {
+  background: #d48166;
+  color: #ffffff;
+}
