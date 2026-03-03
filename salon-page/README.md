@@ -1,73 +1,102 @@
-# React + TypeScript + Vite
+# Glow Salon: Luxury Hair Styling & Care
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+Glow Salon is a premium, mobile-first single-page application (SPA) designed to showcase a hair salon's services, pricing, and portfolio. Built with **React** and **TypeScript**, this modern frontend leverages **Vite** for a fast development experience and **Tailwind CSS** for efficient, utility-first styling. It features direct **WhatsApp integration** for seamless appointment booking and inquiries, creating an elegant and highly converting digital presence for the business.
 
-Currently, two official plugins are available:
+## Features
+-   **Intuitive Navigation**: A responsive, dynamic navigation bar with smooth scrolling to key sections, enhancing user experience.
+-   **Dynamic Business Configuration**: All salon details, including services, pricing, gallery content, and contact information, are centrally managed via `src/businessConfig.ts` for easy updates.
+-   **Direct WhatsApp Integration**: Seamless one-click functionality across various sections allows users to book appointments or make inquiries directly via WhatsApp.
+-   **Elegant Service Showcase**: A dedicated section vividly presents the salon's core services with engaging descriptions.
+-   **Transparent Pricing**: A clear and stylish pricing section outlines key service rates, offering transparency to potential clients.
+-   **Interactive Photo Gallery**: Features a masonry-layout gallery showcasing the salon's professional work, allowing clients to "Book Look" directly from an image.
+-   **Integrated Contact & Location**: An embedded Google Map, alongside clear display of business hours and address, simplifies finding the salon.
+-   **Modern UI/UX**: Crafted with **Tailwind CSS** for a polished and responsive design, complemented by **Motion** for smooth, engaging animations.
+-   **Client Testimonials**: A dedicated section highlighting positive client feedback, building trust and credibility.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
 
-## React Compiler
+Follow these steps to set up the project locally on your machine.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Installation
 
-## Expanding the ESLint configuration
+1.  **Clone the Repository**:
+    ```bash
+    git clone git@github.com:Charmingdc/templates # Assuming you'd rename the directory if preferred
+    ```
+2.  **Navigate to Project Directory**:
+    ```bash
+    cd templates # Or your chosen directory name
+    ```
+3.  **Install Dependencies**:
+    ```bash
+    npm install
+    ```
+    or if you prefer yarn:
+    ```bash
+    yarn install
+    ```
+    or pnpm:
+    ```bash
+    pnpm install
+    ```
+4.  **Start the Development Server**:
+    ```bash
+    npm run dev
+    ```
+    This will typically start the application at `http://localhost:5173`.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+5.  **Build for Production**:
+    ```bash
+    npm run build
+    ```
+    This command compiles the project for production, creating optimized assets in the `dist` directory.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+6.  **Preview Production Build**:
+    ```bash
+    npm run preview
+    ```
+    This command serves the built production application locally, allowing you to test it before deployment.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Environment Variables
+This project primarily uses an internal configuration file for business details. No external `.env` files or system environment variables are strictly required for the application to run. All configurable data is managed within `src/businessConfig.ts`.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Usage
+Upon running the application, you will be presented with the Glow Salon landing page.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+-   **Navigate**: Use the top navigation bar to jump between sections like "Services", "Rates", "Portfolio", and "Find Us".
+-   **Book Appointments**: Look for "Book Your Visit" or "Book Appointment" buttons throughout the site, especially in the Hero, Services, and Contact sections. Clicking these buttons will open a direct WhatsApp chat with the salon, pre-filled with a relevant message.
+-   **Explore Gallery**: Visit the "Portfolio" section to view examples of the salon's work. You can tap on any image to expand it and find an option to "Book Look" for that specific style via WhatsApp.
+-   **Find Us**: The "Find Us" section provides the salon's address, working hours, and an interactive Google Map for easy directions.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Technologies Used
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+| Technology       | Description                                                          | Link                                                                      |
+| :--------------- | :------------------------------------------------------------------- | :------------------------------------------------------------------------ |
+| React            | A JavaScript library for building dynamic user interfaces.           | [https://react.dev/](https://react.dev/)                                  |
+| TypeScript       | A typed superset of JavaScript that compiles to plain JavaScript.    | [https://www.typescriptlang.org/](https://www.typescriptlang.org/)        |
+| Vite             | A next-generation frontend tooling that provides an extremely fast development experience. | [https://vitejs.dev/](https://vitejs.dev/)                                |
+| Tailwind CSS     | A utility-first CSS framework for rapidly building custom designs.   | [https://tailwindcss.com/](https://tailwindcss.com/)                      |
+| Motion           | A tiny, production-ready animation library for React that makes complex animations simple. | [https://motion.dev/](https://motion.dev/)                                |
+| ESLint           | A pluggable linting utility for JavaScript and TypeScript.           | [https://eslint.org/](https://eslint.org/)                                |
+| PostCSS          | A tool for transforming CSS with JavaScript plugins, used here with Autoprefixer. | [https://postcss.org/](https://postcss.org/)                              |
+| Autoprefixer     | A PostCSS plugin to parse CSS and add vendor prefixes to CSS rules.  | [https://github.com/postcss/autoprefixer](https://github.com/postcss/autoprefixer) |
+
+## License
+This project is open-source and available under the MIT License.
+
+## Author
+
+**[Your Name Here]**
+
+-   LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/your-username)
+-   X (formerly Twitter): [@your_twitter_handle](https://twitter.com/your_twitter_handle)
+
+---
+
+![TypeScript](https://img.shields.io/badge/Made%20with-TypeScript-blue?style=flat-square&logo=typescript)
+![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react)
+![Vite](https://img.shields.io/badge/Vite-7.3-yellowgreen?style=flat-square&logo=vite)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=flat-square&logo=tailwindcss)
+
+[![Readme was generated by Dokugen](https://img.shields.io/badge/Readme%20was%20generated%20by-Dokugen-brightgreen)](https://www.npmjs.com/package/dokugen)
